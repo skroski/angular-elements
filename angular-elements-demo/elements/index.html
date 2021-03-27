@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Angular Elements Html</title>
+  <base href="/">
+  <script src="http://127.0.0.1:8080/elements/elements.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <tag-button button-label="Clique Aqui"></tag-button>
+  <tag-list label-list="List Test"></tag-list>
+  <script>
+    const component = document.querySelector('tag-button');
+    const component2 = document.querySelector('tag-list');
+    component.addEventListener('customEvent', event => {
+      alert(event.detail)
+    })
+    component2.addEventListener('customEventList', event => {
+      alert(event.detail)
+    })
+  </script>
+</body>
+</html>
